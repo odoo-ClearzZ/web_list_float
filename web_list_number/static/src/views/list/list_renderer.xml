@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="web.ListRenderer" t-inherit-mode="extension">
+        <xpath expr="//thead//th[@t-if='hasSelectors']" position="before">
+            <th class="o_list_record_selector">#</th>
+        </xpath>
+        <xpath expr="//tfoot//td[@t-if='hasSelectors']" position="before">
+            <td class="o_list_record_selector"/>
+        </xpath>
+    </t>
+
+    <t t-inherit="web.ListRenderer.RecordRow" t-inherit-mode="extension">
+        <xpath expr="//td[@t-if='hasSelectors']" position="before">
+            <t t-set="num" t-value="(record_index + 1) + list.offset"/>
+            <td t-esc="num" t-att-data-tooltip="num" class="cursor-pointer"/>
+        </xpath>
+    </t>
+
+</templates>

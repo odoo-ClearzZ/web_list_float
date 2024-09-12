@@ -3,17 +3,23 @@
 
     <t t-inherit="web.ListRenderer" t-inherit-mode="extension">
         <xpath expr="//thead//th[@t-if='hasSelectors']" position="before">
-            <th class="o_list_record_selector">#</th>
+            <t t-if="numSwitch">
+                <th class="o_list_record_selector list-number">#</th>
+            </t>
         </xpath>
         <xpath expr="//tfoot//td[@t-if='hasSelectors']" position="before">
-            <td class="o_list_record_selector"/>
+            <t t-if="numSwitch">
+                <td class="o_list_record_selector"/>
+            </t>
         </xpath>
     </t>
 
     <t t-inherit="web.ListRenderer.RecordRow" t-inherit-mode="extension">
         <xpath expr="//td[@t-if='hasSelectors']" position="before">
-            <t t-set="num" t-value="(record_index + 1) + list.offset"/>
-            <td t-esc="num" t-att-data-tooltip="num" class="cursor-pointer"/>
+            <t t-if="numSwitch">
+                <t t-set="num" t-value="(record_index + 1) + list.offset"/>
+                <td t-esc="num" t-att-data-tooltip="num" class="cursor-pointer"/>
+            </t>
         </xpath>
     </t>
 

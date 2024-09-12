@@ -22,5 +22,6 @@
             'web_list_number/static/src/views/list/*.*',
         ]
     },
+    'images': ['static/img/img2.png'],
 }
 

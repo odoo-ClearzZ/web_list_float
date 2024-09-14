@@ -23,4 +23,10 @@
         </xpath>
     </t>
 
+    <t t-inherit="web.ListRenderer.Rows" t-inherit-mode="extension">
+        <xpath expr="//tr[@t-foreach='getEmptyRowIds']/td" position="before">
+            <td/>
+        </xpath>
+    </t>
+
 </templates>

@@ -25,7 +25,14 @@
 
     <t t-inherit="web.ListRenderer.Rows" t-inherit-mode="extension">
         <xpath expr="//tr[@t-foreach='getEmptyRowIds']/td" position="before">
-            <td/>
+            <t t-if="numSwitch">
+                <td/>
+            </t>
+        </xpath>
+        <xpath expr="//td[@t-if='withHandleColumn']" position="before">
+            <t t-if="numSwitch">
+                <td/>
+            </t>
         </xpath>
     </t>
 

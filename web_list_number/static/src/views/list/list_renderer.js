@@ -44,7 +44,7 @@ patch(ListRenderer.prototype, {
                 th.style.width = `${Math.floor(this.columnWidths[index])}px`;
             }
             if (Array.from(th.classList).includes('list-number')){
-                th.style.width = `${String(this.props.list.offset + this.props.list.limit).length * 20}px`;
+                th.style.width = `${String(this.props.list.offset || this.props.list.limit).length * 20}px`;
             }
         });
     }

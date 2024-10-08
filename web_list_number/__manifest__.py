@@ -2,7 +2,7 @@
 {
     "name": "Web List Number",
     "summary": "列表序号 List Number",
-    "version": "17.0.0.1",
+    "version": "1.0",
     "category": "clearzZ/clearzZ",
     "website": "mailto:1801226631@qq.com",
     "author": "clearzZ",

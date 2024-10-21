@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Web List Number",
-    "summary": "列表序号 List Number",
+    "summary": "列表序号 List Number, Row Number, Record Number",
     "version": "1.0",
     "category": "clearzZ/clearzZ",
     "website": "mailto:1801226631@qq.com",

@@ -36,4 +36,13 @@
         </xpath>
     </t>
 
+    <t t-inherit="web.ListRenderer.GroupRow" t-inherit-mode="extension">
+        <xpath expr="//th[@tabindex='-1']" position="before">
+            <t t-if="numSwitch">
+                <t t-set="num" t-value="(group_index + 1) + list.offset"/>
+                <td t-esc="num" t-att-data-tooltip="num" class="cursor-pointer"/>
+            </t>
+        </xpath>
+    </t>
+
 </templates>
